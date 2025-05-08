@@ -1,5 +1,14 @@
-import "@/styles/globals.css";
+// 📁 src/pages/_app.js
+import '../styles/globals.css';
+import { AuthProvider } from '../context/AuthContext';
+import Layout from '../components/Layout';
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <AuthProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AuthProvider>
+  );
 }
