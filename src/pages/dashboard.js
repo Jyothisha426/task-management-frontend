@@ -15,12 +15,12 @@ const Dashboard = () => {
         router.push("/login");
       }
       try {
-        const tasksResponse = await axios.get("http://localhost:5000/api/tasks", {
+        const tasksResponse = await axios.get("https://task-management-backend-q4u7.onrender.com/api/tasks", {
           headers: { Authorization: token },
         });
         setTasks(tasksResponse.data);
 
-        const notificationsResponse = await axios.get("http://localhost:5000/api/notifications", {
+        const notificationsResponse = await axios.get("https://task-management-backend-q4u7.onrender.com/api/notifications", {
           headers: { Authorization: token },
         });
         setNotifications(notificationsResponse.data);
