@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", { 
+      await axios.post("https://task-management-backend-q4u7.onrender.com/api/auth/register", { 
         name, 
         email, 
         password 
